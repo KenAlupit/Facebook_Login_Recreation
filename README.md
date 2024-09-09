@@ -1,3 +1,3 @@
 # facebook_login_recreation
 
-A new Flutter project.
+A simple recreation of the Facebook mobile login in Flutter.
