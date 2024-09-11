@@ -31,7 +31,8 @@ class HomeScreen extends StatelessWidget {
               builder: (BuildContext context) {
                 return AlertDialog(
                   backgroundColor: Colors.grey[850], // Dark background for popup
-                  title: Center(
+                  
+                  title: const Center(
                     child: Text(
                       "Welcome!",
                       style: TextStyle(
@@ -43,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   content: Text(
                     "$username, your password is $password.",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       color: Colors.white,
                     ),
@@ -55,7 +56,15 @@ class HomeScreen extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
-                        child: Text('Close'),
+                        style: ElevatedButton.styleFrom(
+                          //Color of the Elevated button
+                          backgroundColor: const Color.fromARGB(255, 2, 33, 68)),
+                        child: const Text(
+                          'Close',
+                          style: TextStyle(
+                            //Color of the Text in the Elevated button
+                            color: Colors.white,
+                          )),
                       ),
                     ),
                   ],
