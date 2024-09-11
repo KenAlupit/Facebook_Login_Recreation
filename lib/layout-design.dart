@@ -5,12 +5,14 @@ void main() {
 }
 
 class FacebookLoginPage extends StatelessWidget {
+  const FacebookLoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Facebook Login',
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 2, 33, 68),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Center(
@@ -18,45 +20,49 @@ class FacebookLoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(
+                /*Text(
                   'Facebook',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
-                    color: Colors.blue[800],
+                    color: Colors.white,
                   ),
+                ),*/
+                Image.asset(
+                  'lib/images/fb_icon.png',
+                  height: 100,
                 ),
-                SizedBox(height: 50),
-                TextField(
+                const SizedBox(height: 50),
+                const TextField(
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email or Phone',
-                  ),
+                      border: OutlineInputBorder(),
+                      labelText: 'Email or Phone',
+                      labelStyle: TextStyle(color: Colors.white)),
                 ),
-                SizedBox(height: 20),
-                TextField(
+                const SizedBox(height: 20),
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                  ),
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                      labelStyle: TextStyle(color: Colors.white)),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     // Add login functionality here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue[800],
-                    padding: EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 15),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Log In',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
                     // Add 'Forgot Password' functionality here
@@ -66,20 +72,20 @@ class FacebookLoginPage extends StatelessWidget {
                     style: TextStyle(color: Colors.blue[800]),
                   ),
                 ),
-                SizedBox(height: 20),
-                Divider(),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
+                const Divider(),
+                const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
                     // Add 'Create New Account' functionality here
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.green[700],
-                    padding: EdgeInsets.symmetric(vertical: 15),
+                    backgroundColor: Colors.blue[800],
+                    padding: const EdgeInsets.symmetric(vertical: 15),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Create New Account',
-                    style: TextStyle(fontSize: 18),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ],
