@@ -41,7 +41,7 @@ class _FacebookLoginPageState extends State<FacebookLoginPage> {
       backgroundColor: const Color.fromARGB(255, 2, 33, 68),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Center(
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
